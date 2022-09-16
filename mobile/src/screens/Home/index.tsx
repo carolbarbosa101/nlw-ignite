@@ -7,7 +7,6 @@ import { Heading } from '../../components/Heading';
 
 import { GAMES } from '../../utils/games';
 import { styles } from './styles';
-
 export function Home() {
   return (
     <View style={styles.container}>
@@ -32,7 +31,6 @@ export function Home() {
       horizontal
       contentContainerStyle={styles.contentList}
      />
-
    
     </View>
   );
