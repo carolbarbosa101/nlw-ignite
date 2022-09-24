@@ -1,9 +1,11 @@
 import { GameBanner } from './components/GameBanner';
+import { useState } from 'react'; 
 import './styles/main.css';
 import { CreateAdBanner } from './components/CreateAdBanner';
 import logoImg from './assets/logo_nlw.svg';
 
 function App() {
+
   return (
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
     <img src={logoImg} />
@@ -17,7 +19,6 @@ function App() {
           <GameBanner  bannerUrl="/game4.png" title="Worl of Warcraft" adsCount={1} />
           <GameBanner  bannerUrl="/game5.png" title="Dota 2" adsCount={2} />
           <GameBanner  bannerUrl="/game6.png" title="Fortnite" adsCount={3} />
-          
         </div>
         <CreateAdBanner/>
     </div>
