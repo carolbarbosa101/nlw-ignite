@@ -9,8 +9,8 @@ import { styles } from './styles';
 
 export function Home() {
   useEffect(() => {
-    fetch('http://192.168.0.240/games')
-    .then(response => response.json())
+    fetch('http://192.168.0.240:3333/games')
+    .then(response => response.json()) 
     .then(data => console.log(data))
   }, []);
 
