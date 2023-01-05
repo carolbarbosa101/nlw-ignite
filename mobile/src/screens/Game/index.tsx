@@ -8,7 +8,8 @@ import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import { THEME } from '../../theme';
-import { logoImg } from '../../assets/logo-nlw-esports.png';
+import { logoImg, Image } from '../../assets/logo-nlw-esports.png';
+
 
 interface RoutesParams {
   id: string;
@@ -33,11 +34,8 @@ export function Game() {
         size={20}
         />
         </TouchableOpacity>
-        <Image
-          source={logoImg}
-          style={styles.logo}
-        />
-      
+        <Image source={logoImg} style={styles.logo} />
+        </View>
     </SafeAreaView>
     </Background>
   );
