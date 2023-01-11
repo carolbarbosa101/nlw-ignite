@@ -40,7 +40,7 @@ export function Home() {
      <FlatList
       data={games}
       keyExtractor={item => item.id}
-      renderItem={({item}) => (
+      renderItem={({ item }) => (
         <GameCard
         data={item}
         onPress={() => handleOpenGame(item)}

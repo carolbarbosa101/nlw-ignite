@@ -6,14 +6,14 @@ const { Navigator, Screen} =  createNativeStackNavigator();
 
 export function AppRoutes(){
   return (
-    <Navigator screenOptions={{headerShown: false }}>
-      < Screen // nome da rota
+    <Navigator screenOptions={{ headerShown: false }}> 
+      < Screen 
         name="home" 
-        component={Home} 
+        component={Home}
       />
 
       < Screen
-        name="game" // componente
+        name="game" 
         component={Game}
       />
     </Navigator>
