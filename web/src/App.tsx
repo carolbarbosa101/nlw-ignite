@@ -2,7 +2,7 @@ import { GameBanner } from './components/GameBanner';
 import { useEffect, useState } from 'react';
 import './styles/main.css';
 import { CreateAdBanner } from './components/CreateAdBanner';
-import logoImg from './assets/logo_nlw.svg';
+import logoImg  from './assets/logo_nlw.svg';
 import * as Dialog from '@radix-ui/react-dialog';
 import { GameController } from 'phosphor-react';
 import { Input } from './components/Form/Input';
