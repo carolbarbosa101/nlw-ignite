@@ -1,6 +1,8 @@
-import { View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
+
 import { DuoInfo } from '../DuoInfo';
 
+import { THEME } from '../../theme';
 import { styles } from './styles';
 
 export interface DuoCardProps {
@@ -10,13 +12,13 @@ export interface DuoCardProps {
   name: string;
   useVoiceChannel: boolean;
   weekDays: string[];
-  yeatsPlaying: number;
+  yearsPlaying: number;
 }
 interface Props {
-data: DuoCardProps;
+  data: DuoCardProps;
 }
 
-export function DuoCard({data}: Props) {
+export function DuoCard({ data }: Props) {
   return (
     <View style={styles.container}>
       <DuoInfo
@@ -26,19 +28,24 @@ export function DuoCard({data}: Props) {
 
        <DuoInfo
         label="Tempo de jogo"
-        value={`${data.yeatsPlaying} anos`}
+        value={`${data.yearsPlaying} anos`}
       />
-
+   
        <DuoInfo
         label="Disponibilidade"
-        value={`${data.weekDays.length} dias` }
+        value={`${data.weekDays.length} dias \u2022 ${data.hourStart} -  ${data.hourEnd}` }
       />
-
+    
        <DuoInfo
-        label="Nome"
-        value="Diego Fernandes"
-        colorValue="#E345"
+        label="Chamada de Áudio"
+        value={data.useVoiceChannel ? "Sim": "Não" }
+        colorValue={data.useVoiceChannel ? THEME.COLORS.SUCCESS: THEME.COLORS.ALERT }
       />
+      <TouchableOpacity
+        style={styles.button}
+      >
+        
+      </TouchableOpacity>
 
     </View>
   );

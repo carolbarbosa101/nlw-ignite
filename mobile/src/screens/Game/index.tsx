@@ -41,17 +41,18 @@ export function Game() {
       <View style={styles.header}>
         <TouchableOpacity onPress={handleGoBack}>
         <Entypo
-        name="chevron-thin-left"
-        color={THEME.COLORS.CAPTION_300}
-        size={20}
+          name="chevron-thin-left"
+          color={THEME.COLORS.CAPTION_300}
+          size={20}
         />
         </TouchableOpacity>
+        
         <Image source={logoImg} style={styles.logo} />
         <View style={styles.right }/>
         </View>
 
         <Image
-          source={{ uri: game.bannerUrl}}
+          source={{ uri: game.bannerUrl }}
           style={styles.cover}
           resizeMode="cover"
         />
@@ -60,16 +61,15 @@ export function Game() {
           title={game.title}
           subtitle="Conecte-se e comece a jogar!"
         />
+
         <FlatList
           data={duos}
           keyExtractor={item => item.id}
           renderItem={({ item }) => (
             <DuoCard data={item}/>
           )}
-        />
-
-     
-        <DuoCard data={duos[0]} />
+        />     
+      
     </SafeAreaView>
     </Background>
   );
