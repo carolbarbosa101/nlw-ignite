@@ -72,7 +72,7 @@ export function Game() {
           )}
           horizontal
           style={styles.containerList}
-          contentContainerStyle={[styles.contentList, duos.length === 0 && { flex: 1, alignItems: 'center', justifyContent: 'center'}]}
+          contentContainerStyle={[duos.length > 0 ? styles.contentList : styles.emptyListContent]}
           showsHorizontalScrollIndicator={false}
           ListEmptyComponent={() => (
             <Text style={styles.emptyListText}>
